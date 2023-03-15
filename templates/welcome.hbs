@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>shoes Store | WELCOME</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+   
+<style>
+    *{
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+</style>
+   
+  </head>
+  
+  <body>
+   
+
+
+ <nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page">WELCOME {{getDataUser.userName}}</a>
+        </li>
+       
+        
+        
+      </ul>
+      <form class="d-flex" role="search">
+        <button class="btn btn-outline-primary" id="editPro">Edit Portfolio</button> &nbsp;&nbsp;
+        <button class="btn btn-outline-danger" id="logoutalldevices">Logout from all Devices</button> &nbsp;&nbsp;
+        <button class="btn btn-outline-success" id="logoutUser">Logout</button>
+      </form>
+      
+    </div>
+  </div>
+</nav>
+
+
+<!-- -->
+
+
+<div class="container mt-5">
+  <div class="row">
+
+    <div class="col-sm-4">
+      <h2>{{getDataUser.profileName}}</h2>
+      <h5>{{getDataUser.profileEmail}}</h5>
+      <div class="fakeimg">Address</div>
+      <p>{{getDataUser.profileAddress}}</p>
+      <h3 class="mt-4">Skills</h3>
+      {{#each getDataUser.profileSkills}}
+      <p>{{this.skills}}</p>
+      {{/each}}
+
+      <hr class="d-sm-none">
+    </div>
+
+    <div class="col-sm-8">
+      <h2>EDUCATIONAL QUALIFICATIONS</h2>
+         
+        <table class="table" style="text-align: left;">
+          <thead>
+            <tr>
+              <th scope="col">Qualification</th>
+              <th scope="col">School/College</th>
+              <th scope="col">Board/University</th>
+              <th scope="col">CGPA/Per</th>
+              <th scope="col">Year</th>
+            </tr>
+          </thead>
+          {{#each getDataUser.profileQualifications}}
+          <tbody>
+            <tr>
+              <th scope="row">{{this.qualificationType}}</th>
+              <td>{{this.school}}</td>
+              <td>{{this.board}}</td>
+              <td>{{this.cgpa}}</td>
+              <td>{{this.year}}</td>
+            </tr>
+          </tbody>
+           {{/each}}
+    </table>
+      
+
+      <h2>ACADEMIC & CO-CURRICULAR ACHIEVEMENTS</h2>
+        <table class="table" style="text-align: left;">
+          
+          {{#each getDataUser.profileAchievement}}
+          <tbody>
+            <tr>
+              <td scope="row">{{this.Achievement}}</td>
+            </tr>
+          </tbody>
+          {{/each}}
+
+    </table>
+    
+
+
+    <h2>Projects</h2>
+        <table class="table" style="text-align: left;">
+          
+          {{#each getDataUser.profileProjects}}
+          <tbody>
+            <tr>
+              <td scope="row">{{this.projects}}</td>
+            </tr>
+          </tbody>
+          {{/each}}
+    </table>
+
+    <h2>Extra-Curriculam Activities</h2>
+        <table class="table" style="text-align: left;">
+           {{#each getDataUser.profileActivities}}
+          <tbody>
+            <tr>
+              <td scope="row">{{this.activities}}</td>
+            </tr>
+          </tbody>
+          {{/each}}
+    </table>
+
+
+
+    </div>
+
+  </div>
+</div>
+
+<div class="mt-5 p-4 bg-dark text-white text-center">
+  <p>Designed by Abhay Chaudhary</p>
+</div>
+
+</br>
+  <script type="text/javascript" src="/logoutPassing.js"></script>
+
+   </body>
+</html>

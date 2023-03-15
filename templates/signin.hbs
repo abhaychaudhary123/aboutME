@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{>headerFiles}}
+   
+  </head>
+  
+  <body>
+   
+   {{>navBar}}
+
+<div class="d-flex justify-content-center ">
+    <div class="mb-3 row">
+        <div class="col-sm-12">
+        <h3 style="color: green;">
+            User Details
+        </h3>
+        </div>
+    </div>
+</div>
+
+
+<div class="d-flex justify-content-center ">
+    <div class="mb-3 row">
+        <div class="col-sm-12">
+        <input type="text" class="form-control shadow-none" id="name" placeholder="Name">
+        </div>
+    </div>
+</div>
+
+<div class="d-flex justify-content-center">
+    <div class="mb-3 row">
+        <div class="col-sm-12">
+        <input type="text" class="form-control shadow-none" id="email" placeholder="Email">
+        </div>
+    </div>
+</div>
+    
+<div class="d-flex justify-content-center">
+    <div class="mb-3 row">
+        <div class="col-sm-12">
+        <input type="text" class="form-control shadow-none" id="phone" placeholder="Phone Number">
+        </div>
+    </div>
+</div> 
+
+<div class="d-flex justify-content-center">
+    <div class="mb-3 row">
+        <div class="col-sm-12">
+        <input type="text" class="form-control shadow-none" id="password" placeholder="Password">
+        </div>
+    </div>
+</div> 
+
+<div class="d-flex justify-content-center">
+    <div class="mb-3 row">
+        <div class="col-sm-12">
+        <input type="text" class="form-control shadow-none" id="cpassword" placeholder="Confirm Password">
+        </div>
+    </div>
+</div> 
+
+<div class="d-flex justify-content-center">
+    <div class="mb-3 row">
+        <div class="col-sm-12">
+        <p id="displayMessage2" style="display:none"></p>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex justify-content-center " >
+    <div class="mb-3 row">
+        <div class="col-sm-12" id="redirect" style="display: none;">
+            <p>Redirecting to Login Page</p>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex justify-content-center " style="margin-top: -10px;">
+    <div class="mb-3 row">
+        <div class="col-sm-12">
+            <div class="spinner-grow text-success" role="status" id="showSpin" style="display: none;">
+<span class="visually-hidden"   ><p style="color: green;" ></p> </span>
+</div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="d-flex justify-content-center " style="margin-top: -25px;">
+    <div class="mb-3 row">
+        <div class="col-sm-12">
+       <input type="button" class="btn btn-warning"  id="Submitclick" value="Submit">
+        </div>
+    </div>
+</div>
+
+
+  <script type="text/javascript" src="/signinPassing.js"></script>
+   </body>
+</html>
